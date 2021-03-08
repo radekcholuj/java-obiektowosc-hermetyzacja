@@ -39,7 +39,7 @@ public class ComunicationRepo {
                     System.out.println("Wniosek o wydanie tablicy: ");
                     System.out.println("1 - samochodowa");
                     System.out.println("2 - motocyklowa");
-                    System.out.println("3 - zabytkowa");
+                    System.out.println("3 - tymczasowa");
                     String typeOfLicensePlate = scanner.next();
                     String licensePlate = "";
 
