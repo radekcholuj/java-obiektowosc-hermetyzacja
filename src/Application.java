@@ -2,7 +2,7 @@ public class Application {
     private String name;
     private String sureName;
     private String licensePlate;
-    private String status;
+    private String status = "złożono";
     private int aplicationNumber;
 
     public Application(String name, String sureName, String licensePlate, int aplicationNumber) {
@@ -26,22 +26,27 @@ public class Application {
     }
 
     public String getName() {
+
         return name;
     }
 
     public String getSureName() {
+
         return sureName;
     }
 
     public String getLicensePlate() {
+
         return licensePlate;
     }
 
     public String getStatus() {
+
         return status;
     }
 
     public int getAplicationNumber() {
+
         return aplicationNumber;
     }
 }

@@ -24,6 +24,7 @@ public class ComunicationRepo {
                 System.out.println("To nie jest poprawna opcja");
             }
             choose = scanner.nextInt();
+            scanner.nextLine();
 
 
             switch (choose) {
@@ -32,9 +33,9 @@ public class ComunicationRepo {
                     System.out.println("*****");
                     System.out.println("Wniosek składa: ");
                     System.out.print("Imię: ");
-                    String name = scanner.next();
+                    String name = scanner.nextLine();
                     System.out.print("Nazwisko: ");
-                    String sureName = scanner.next();
+                    String sureName = scanner.nextLine();
                     System.out.println("Wniosek o wydanie tablicy: ");
                     System.out.println("1 - samochodowa");
                     System.out.println("2 - motocyklowa");
@@ -61,7 +62,6 @@ public class ComunicationRepo {
                     System.out.println("*****");
                     System.out.print("Podaj numer wniosku: ");
                     int number = scanner.nextInt();
-                    comunication.findApplication(number);
 
                     System.out.println("Możesz zmienić status wniosku");
                     System.out.println("1 - w realizacji");
@@ -71,14 +71,12 @@ public class ComunicationRepo {
                     switch (chooseStatusOption) {
                         case "1":
                             comunication.changeStatus(number, "w realizacji");
-                            comunication.displayApplicationStatus(number);
                             break;
                         case "2":
                             comunication.changeStatus(number, "do odbioru");
-                            comunication.displayApplicationStatus(number);
                             break;
                     }
-
+                    comunication.displayApplicationStatus(number);
                     break;
                 case 3:
                     System.out.println("*****");
@@ -86,7 +84,6 @@ public class ComunicationRepo {
                     System.out.println("*****");
                     System.out.print("Podaj numer wniosku: ");
                     number = scanner.nextInt();
-                    comunication.findApplication(number);
                     comunication.displayApplicationStatus(number);
                     break;
                 case 100:
